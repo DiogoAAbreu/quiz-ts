@@ -1,14 +1,17 @@
 'use client'
 
-import Image from "next/image";
+import QuestionItem from "@/components/QuestionItem";
 import { questionList } from "@/data/questionList";
-import OptionItem from "@/components/OptionItem";
+import { OptionType } from "@/types/Question";
 import { useState } from "react";
 
 export default function Home() {
-  const question = questionList[0]
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [answersList, setAnswersList] = useState<OptionType[]>([]);
 
-  const [selected, setSelected] = useState<boolean>(false)
+  const selectedQuestion = questionList[currentQuestion];
+
+  console.log(answersList)
 
   return (
     <div className="w-screen h-screen flex justify-center items-center bg-blue-600">
@@ -17,17 +20,17 @@ export default function Home() {
           <h1 className="text-3xl font-bold p-5 border-b-1 border-gray-300">Quiz de Culinária</h1>
         </div>
         <div>
-          <p className="text-3xl font-bold p-5">1. {question.question}</p>
-          <ul className="px-5 pb-5 border-b-1 border-gray-300">
-            {question.options.map((item, index) =>
-              <OptionItem key={index}
-                option={item.option}
-                correct={item.correct}
-                selected={selected}
-                setSelected={setSelected} />)}
-          </ul>
+          <QuestionItem
+            currentQuestion={currentQuestion + 1}
+            selectedQuestion={selectedQuestion}
+            setCurrentQuestion={setCurrentQuestion}
+            setAnswersList={setAnswersList}
+            answersList={answersList}
+          />
         </div>
-        <div className="p-5 text-center text-xl font-semibold text-gray-800">1 de {questionList.length} perguntas</div>
+        <div className="p-5 text-center text-xl font-semibold text-gray-800">
+          {currentQuestion + 1} de {questionList.length} pergunta{questionList.length > 1 ? 's' : ''}
+        </div>
       </div>
     </div>
   );

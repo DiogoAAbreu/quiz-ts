@@ -11,6 +11,4 @@ export type Question = {
 export type OptionType = {
     option: string;
     correct: boolean;
-    setSelected: Dispatch<SetStateAction<boolean>>
-    selected: boolean;
 }

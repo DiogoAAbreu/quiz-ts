@@ -11,14 +11,14 @@ type Props = {
 }
 
 const QuestionItem = ({ currentQuestion, selectedQuestion, setCurrentQuestion, setAnswersList, answersList }: Props) => {
-    const { options, question } = selectedQuestion;
 
     return (
         <div>
-            <p className="text-3xl font-bold p-5">{currentQuestion}. {question}</p>
+            <p className="text-3xl font-bold p-5">{currentQuestion}. {selectedQuestion.question}</p>
             <ul className="px-5 pb-5 border-b-1 border-gray-300">
-                {options.map((item, index) =>
+                {selectedQuestion.options.map((item, index) =>
                     <OptionItem key={index}
+                        idQuestion={selectedQuestion}
                         option={item.option}
                         correct={item.correct}
                         setCurrentQuestion={setCurrentQuestion}

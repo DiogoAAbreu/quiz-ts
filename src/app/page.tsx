@@ -9,7 +9,7 @@ export default function Home() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answersList, setAnswersList] = useState<OptionType[]>([]);
 
-  const selectedQuestion = questionList[currentQuestion];
+  const selectedQuestion = questionList[0];
 
   console.log(answersList)
 

@@ -1,6 +1,5 @@
-import { Dispatch, SetStateAction } from "react";
-
 export type Question = {
+    id: number;
     question: string;
     options: {
         option: string;
@@ -9,6 +8,7 @@ export type Question = {
 }
 
 export type OptionType = {
+    idQuestion: number;
     option: string;
     correct: boolean;
 }

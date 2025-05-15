@@ -2,6 +2,7 @@ import { Question } from "@/types/Question"
 
 export const questionList: Question[] = [
     {
+        id: 1,
         question: 'Qual ingrediente não pode faltar?',
         options: [
             { option: 'Farinha', correct: false },
@@ -12,6 +13,7 @@ export const questionList: Question[] = [
         ]
     },
     {
+        id: 2,
         question: 'Qual alimento tem mais proteína?',
         options: [
             { option: 'Frango', correct: false },

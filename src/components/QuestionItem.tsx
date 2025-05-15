@@ -14,7 +14,7 @@ const QuestionItem = ({ currentQuestion, selectedQuestion, setCurrentQuestion, s
 
     return (
         <div>
-            <p className="text-3xl font-bold p-5">{currentQuestion}. {selectedQuestion.question}</p>
+            <p className="text-3xl font-bold p-5">{currentQuestion + 1}. {selectedQuestion.question}</p>
             <ul className="px-5 pb-5 border-b-1 border-gray-300">
                 {selectedQuestion.options.map((item, index) =>
                     <OptionItem key={index}

@@ -9,7 +9,7 @@ export default function Home() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answersList, setAnswersList] = useState<OptionType[]>([]);
 
-  const selectedQuestion = questionList[0];
+  const selectedQuestion = questionList[currentQuestion];
 
   console.log(answersList)
 
@@ -21,7 +21,7 @@ export default function Home() {
         </div>
         <div>
           <QuestionItem
-            currentQuestion={currentQuestion + 1}
+            currentQuestion={currentQuestion}
             selectedQuestion={selectedQuestion}
             setCurrentQuestion={setCurrentQuestion}
             setAnswersList={setAnswersList}

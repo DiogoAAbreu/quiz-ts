@@ -24,6 +24,7 @@ const QuestionItem = ({ currentQuestion, selectedQuestion, setCurrentQuestion, s
                         setCurrentQuestion={setCurrentQuestion}
                         setAnswersList={setAnswersList}
                         answersList={answersList}
+                        currentQuestion={currentQuestion}
                     />)}
             </ul>
         </div>

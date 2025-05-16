@@ -14,7 +14,7 @@ const ResetButton = ({ setAnswersList, setCurrentQuestion }: Props) => {
     return (
         <button
             onClick={resetQuiz}
-            className="bg-blue-700 text-white p-3 rounded-md cursor-pointer mt-5 hover:opacity-70">
+            className="bg-blue-700 text-white p-3 rounded-md cursor-pointer hover:opacity-70">
             Reiniciar Quiz
         </button>
     )

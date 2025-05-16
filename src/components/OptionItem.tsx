@@ -28,7 +28,7 @@ const OptionItem = ({ idQuestion, option, correct, setCurrentQuestion, currentQu
             setTimeout(() => {
                 setOptionSelected(false)
                 setCurrentQuestion(currentQuestion + 1)
-            }, 3000);
+            }, 1500);
         }
 
     }
